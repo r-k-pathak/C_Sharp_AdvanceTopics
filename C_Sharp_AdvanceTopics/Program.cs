@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReadOnlyCustomer=C_Sharp_AdvanceTopics_ReadOnlyConcept;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,8 +18,45 @@ namespace C_Sharp_AdvanceTopics
             UseOfParamArgumentModifier();
             UsagesOfOut();
             UseOfRefArgumentModifiers();
+            UseOfReadOnly();
+            UserOfProperties();
             Console.ReadLine();
 
+        }
+
+        private static void UserOfProperties()
+        {
+            Console.WriteLine("Use of Encapsulation");
+            Encapsulation.Customer customer = new Encapsulation.Customer();
+            customer.SetBirthday(new DateTime(1990, 6, 24));
+            Console.WriteLine("Age of Customer Today:{0}", customer.Age);
+
+        }
+
+        private static void UseOfReadOnly()
+        {
+            ReadOnlyCustomer.Customer customer = new ReadOnlyCustomer.Customer();
+            Console.WriteLine("Order Detail for First Customer");
+            customer.Order.Add(new ReadOnlyCustomer.Orders { OrderNumber = 1, OrderSummary = "Item1" });
+            foreach (var order in customer.Order)
+            {
+                Console.WriteLine("Order number :{0} and Order Summary:{0}", order.OrderNumber, order.OrderSummary);
+            }
+            /*
+             *as in above class Order is not declared as read only so you might accidently assign it new object and old values gonna destroyed;
+             * to above this we gonna use readOnly
+             */
+            Console.WriteLine("Order Detail for Second Customer");
+            ReadOnlyCustomer.Customer customer1 = new ReadOnlyCustomer.Customer();
+            foreach (var order in customer1.Order)
+            {
+                Console.WriteLine("Order number :{0} and Order Summary:{0}", order.OrderNumber, order.OrderSummary);
+            }
+            /*
+             * so as we see second customer don't have any order that's true.
+             * that reveals a concept that readonly fields cannot be assigned to(except in construtor or variable initializer)
+             * uncomment method InitializeCustomerOrder under  ReadOnlyCustomer.Customer and see the error message
+             */
         }
 
         private static void UseOfRefArgumentModifiers()

@@ -42,15 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculations.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="Orders.cs" />
-    <Compile Include="Point.cs" />
+    <Compile Include="ClassConcept\Calculations.cs" />
+    <Compile Include="ClassConcept\Customer.cs" />
+    <Compile Include="ClassConcept\CustomerWithReadOnlyConcept.cs" />
+    <Compile Include="ClassConcept\Orders.cs" />
+    <Compile Include="ClassConcept\Point.cs" />
+    <Compile Include="Encapsulation\Customer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClassConcept\AutoGenratedFields.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
