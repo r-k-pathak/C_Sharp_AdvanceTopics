@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using C_Sharp_AdvanceTopics.ClassConcept;
 
 namespace C_Sharp_AdvanceTopics
 {
@@ -20,8 +21,17 @@ namespace C_Sharp_AdvanceTopics
             UseOfRefArgumentModifiers();
             UseOfReadOnly();
             UserOfProperties();
-            Console.ReadLine();
+            UseOfIndexes();
 
+        }
+
+        private static void UseOfIndexes()
+        {
+            Console.WriteLine("Use of Indexer");
+            Indexer indexer = new Indexer();
+            indexer["Name"] = "This is test text";
+            Console.WriteLine(indexer["Name"]);
+            Console.ReadLine();
         }
 
         private static void UserOfProperties()

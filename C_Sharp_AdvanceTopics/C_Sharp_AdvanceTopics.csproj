@@ -45,6 +45,7 @@
     <Compile Include="ClassConcept\Calculations.cs" />
     <Compile Include="ClassConcept\Customer.cs" />
     <Compile Include="ClassConcept\CustomerWithReadOnlyConcept.cs" />
+    <Compile Include="ClassConcept\Indexer.cs" />
     <Compile Include="ClassConcept\Orders.cs" />
     <Compile Include="ClassConcept\Point.cs" />
     <Compile Include="Encapsulation\Customer.cs" />
