@@ -42,21 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassConcept\Calculations.cs" />
-    <Compile Include="ClassConcept\Customer.cs" />
-    <Compile Include="ClassConcept\CustomerWithReadOnlyConcept.cs" />
-    <Compile Include="ClassConcept\Indexer.cs" />
-    <Compile Include="ClassConcept\Orders.cs" />
-    <Compile Include="ClassConcept\Point.cs" />
-    <Compile Include="Encapsulation\Customer.cs" />
+    <Compile Include="Section1\ClassConcept\Calculations.cs" />
+    <Compile Include="Section1\ClassConcept\Customer.cs" />
+    <Compile Include="Section1\ClassConcept\CustomerWithReadOnlyConcept.cs" />
+    <Compile Include="Section1\ClassConcept\Indexer.cs" />
+    <Compile Include="Section1\ClassConcept\Orders.cs" />
+    <Compile Include="Section1\ClassConcept\Point.cs" />
+    <Compile Include="Section1\Encapsulation\Customer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Section1\Exercise_Solution\StopWatch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Encapsulation\AutoGenratedFields.PNG" />
+    <Content Include="Section1\Encapsulation\AutoGenratedFields.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,10 +1,7 @@
 ﻿using ReadOnlyCustomer=C_Sharp_AdvanceTopics_ReadOnlyConcept;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using C_Sharp_AdvanceTopics.ClassConcept;
+using C_Sharp_AdvanceTopics.Section1.Exercise_Solution;
 
 namespace C_Sharp_AdvanceTopics
 {
@@ -14,15 +11,63 @@ namespace C_Sharp_AdvanceTopics
 
         static void Main(string[] args)
         {
-            ConstructorOverLoading();
-            MethodOverloading();
-            UseOfParamArgumentModifier();
-            UsagesOfOut();
-            UseOfRefArgumentModifiers();
-            UseOfReadOnly();
-            UserOfProperties();
-            UseOfIndexes();
+            //ConstructorOverLoading();
+            //MethodOverloading();
+            //UseOfParamArgumentModifier();
+            //UsagesOfOut();
+            //UseOfRefArgumentModifiers();
+            //UseOfReadOnly();
+            //UserOfProperties();
+            //UseOfIndexes();
+            
+            
+            StopWatch stopWatch = new StopWatch();
+            CommonStartUpMessage();
+            while (true)
+            {
+                string userInput = Console.ReadLine();
+                switch (userInput)
+                {
+                    case "start":
+                        try
+                        {
+                            stopWatch.StartClock();
+                        }
+                        catch(Exception ex)
 
+                        {
+                            Console.WriteLine(ex.Message);
+                            CommonStartUpMessage();
+                        }
+                       
+                        break;
+                    case "stop":
+                        stopWatch.StopClock();
+                        break;
+                    case "duration":
+                        Console.WriteLine(stopWatch.Duration);
+                        break;
+
+                    case "exit":
+                        Environment.Exit(0);
+                        break;                   
+                    default: 
+                        Console.WriteLine("Please provide valid input");
+                        CommonStartUpMessage();
+                        break;
+                }
+            }
+            
+            //Console.ReadLine();
+
+        }
+        public static void CommonStartUpMessage()
+        {
+            Console.WriteLine("Follow Instructions to use StopWatch");
+            Console.WriteLine("Type start then Press enter to Start.");
+            Console.WriteLine("Type stop then Press enter to Stop.");
+            Console.WriteLine("Type Duration then press enter to get total duration");
+            Console.WriteLine("Type exit then Press enter to Exit.\n\n\n\n");
         }
 
         private static void UseOfIndexes()
