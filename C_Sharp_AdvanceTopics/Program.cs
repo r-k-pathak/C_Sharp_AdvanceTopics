@@ -64,7 +64,6 @@ namespace C_Sharp_AdvanceTopics
             #region section-2 
             //Access modifiers
             //for detail find the class inside Section2_Inheritance/AccessModifiers
-
             #endregion
 
 
