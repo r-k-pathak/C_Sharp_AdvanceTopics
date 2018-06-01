@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,22 +43,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Section1\ClassConcept\Calculations.cs" />
-    <Compile Include="Section1\ClassConcept\Customer.cs" />
-    <Compile Include="Section1\ClassConcept\CustomerWithReadOnlyConcept.cs" />
-    <Compile Include="Section1\ClassConcept\Indexer.cs" />
-    <Compile Include="Section1\ClassConcept\Orders.cs" />
-    <Compile Include="Section1\ClassConcept\Point.cs" />
-    <Compile Include="Section1\Encapsulation\Customer.cs" />
+    <Compile Include="Section1_Classes\ClassConcept\Calculations.cs" />
+    <Compile Include="Section1_Classes\ClassConcept\Customer.cs" />
+    <Compile Include="Section1_Classes\ClassConcept\CustomerWithReadOnlyConcept.cs" />
+    <Compile Include="Section1_Classes\ClassConcept\Indexer.cs" />
+    <Compile Include="Section1_Classes\ClassConcept\Orders.cs" />
+    <Compile Include="Section1_Classes\ClassConcept\Point.cs" />
+    <Compile Include="Section1_Classes\Encapsulation\Customer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Section1\Exercise_Solution\StopWatch.cs" />
+    <Compile Include="Section1_Classes\Exercise_Solution\StopWatch.cs" />
+    <Compile Include="Section2_Inheritance\AccessModifiers\Product.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Section1\Encapsulation\AutoGenratedFields.PNG" />
+    <Content Include="Section1_Classes\Encapsulation\AutoGenratedFields.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AssemblyForInternal\AssemblyForInternal.csproj">
+      <Project>{9b640b91-8399-4ba4-9d2c-08b5b8ff369c}</Project>
+      <Name>AssemblyForInternal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Section2_Inheritance\AccessiblityDomain\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

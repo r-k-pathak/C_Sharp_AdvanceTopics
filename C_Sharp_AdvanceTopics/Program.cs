@@ -5,12 +5,14 @@ using C_Sharp_AdvanceTopics.Section1.Exercise_Solution;
 
 namespace C_Sharp_AdvanceTopics
 {
+   
     
     class Program
     {
 
         static void Main(string[] args)
         {
+            #region section1-Classes
             //ConstructorOverLoading();
             //MethodOverloading();
             //UseOfParamArgumentModifier();
@@ -19,46 +21,54 @@ namespace C_Sharp_AdvanceTopics
             //UseOfReadOnly();
             //UserOfProperties();
             //UseOfIndexes();
-            
-            
-            StopWatch stopWatch = new StopWatch();
-            CommonStartUpMessage();
-            while (true)
-            {
-                string userInput = Console.ReadLine();
-                switch (userInput)
-                {
-                    case "start":
-                        try
-                        {
-                            stopWatch.StartClock();
-                        }
-                        catch(Exception ex)
+            #region Exercise And Solution
+            //StopWatch stopWatch = new StopWatch();
+            //CommonStartUpMessage();
+            //while (true)
+            //{
+            //    string userInput = Console.ReadLine();
+            //    switch (userInput)
+            //    {
+            //        case "start":
+            //            try
+            //            {
+            //                stopWatch.StartClock();
+            //            }
+            //            catch (Exception ex)
 
-                        {
-                            Console.WriteLine(ex.Message);
-                            CommonStartUpMessage();
-                        }
-                       
-                        break;
-                    case "stop":
-                        stopWatch.StopClock();
-                        break;
-                    case "duration":
-                        Console.WriteLine(stopWatch.Duration);
-                        break;
+            //            {
+            //                Console.WriteLine(ex.Message);
+            //                CommonStartUpMessage();
+            //            }
 
-                    case "exit":
-                        Environment.Exit(0);
-                        break;                   
-                    default: 
-                        Console.WriteLine("Please provide valid input");
-                        CommonStartUpMessage();
-                        break;
-                }
-            }
-            
-            //Console.ReadLine();
+            //            break;
+            //        case "stop":
+            //            stopWatch.StopClock();
+            //            break;
+            //        case "duration":
+            //            Console.WriteLine(stopWatch.Duration);
+            //            break;
+
+            //        case "exit":
+            //            Environment.Exit(0);
+            //            break;
+            //        default:
+            //            Console.WriteLine("Please provide valid input");
+            //            CommonStartUpMessage();
+            //            break;
+            //    }
+            //}
+
+            #endregion
+            #endregion
+            #region section-2 
+            //Access modifiers
+            //for detail find the class inside Section2_Inheritance/AccessModifiers
+
+            #endregion
+
+
+            Console.ReadLine();
 
         }
         public static void CommonStartUpMessage()
