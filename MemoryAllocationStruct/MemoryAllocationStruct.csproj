@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{25BFD622-B469-42AE-B655-3D8F5B4F29B4}</ProjectGuid>
+    <ProjectGuid>{6DE348B2-FE93-4612-8966-AD63300ACBA9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>C_Sharp_AdvanceTopics</RootNamespace>
-    <AssemblyName>C_Sharp_AdvanceTopics</AssemblyName>
+    <RootNamespace>MemoryAllocationStruct</RootNamespace>
+    <AssemblyName>MemoryAllocationStruct</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,7 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,40 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Section1_Classes\ClassConcept\Calculations.cs" />
-    <Compile Include="Section1_Classes\ClassConcept\Customer.cs" />
-    <Compile Include="Section1_Classes\ClassConcept\CustomerWithReadOnlyConcept.cs" />
-    <Compile Include="Section1_Classes\ClassConcept\Indexer.cs" />
-    <Compile Include="Section1_Classes\ClassConcept\Orders.cs" />
-    <Compile Include="Section1_Classes\ClassConcept\Point.cs" />
-    <Compile Include="Section1_Classes\Encapsulation\Customer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Section1_Classes\Exercise_Solution\StopWatch.cs" />
-    <Compile Include="Section2_Inheritance\AccessModifiers\Product.cs" />
-    <Compile Include="Section2_Inheritance\Association\DbMigrator.cs" />
-    <Compile Include="Section2_Inheritance\Association\Installer.cs" />
-    <Compile Include="Section2_Inheritance\Association\Logger.cs" />
-    <Compile Include="Section2_Inheritance\BoxingAndUnBoxing\Structure\CoOrdinates.cs" />
-    <Compile Include="Section2_Inheritance\Exercise\Stack.cs" />
-    <Compile Include="Section2_Inheritance\Inheritacne\Car.cs" />
-    <Compile Include="Section2_Inheritance\Inheritacne\Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Section1_Classes\Encapsulation\AutoGenratedFields.PNG" />
-    <Content Include="UnAnweredTopics\SomeUnaswered.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AssemblyForInternal\AssemblyForInternal.csproj">
-      <Project>{9b640b91-8399-4ba4-9d2c-08b5b8ff369c}</Project>
-      <Name>AssemblyForInternal</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Section2_Inheritance\AccessiblityDomain\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

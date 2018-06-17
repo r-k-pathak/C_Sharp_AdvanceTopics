@@ -1,0 +1,12 @@
+﻿Hi , I am going add here some of the points for my memories so i will not miss these.
+These are the topic which as pe my perspective need more time to dive deeper into the detail,
+I will surely cover these topics but for now ,i don't want to stop my concept series because of these.
+
+1)Doamin Accessiblity in C#
+2)Memory allocation from Stack and Heap perspective, for Struct with and without new key.
+(Done some RND on this but there are some theories which makes me little confuses,I will come up with complete depth)
+3)Gloal Allias for our own written class,Is it allowed in C#? if yes then how, if no then how we are able to Use string alias of String Class.
+(This is a stackoverflow question which is not asnwered yet)
+
+4) More expalnation on Boxing and Unboxing.
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing

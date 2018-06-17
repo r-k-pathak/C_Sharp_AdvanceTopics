@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_Sharp_AdvanceTopics", "C_Sharp_AdvanceTopics.csproj", "{25BFD622-B469-42AE-B655-3D8F5B4F29B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyForInternal", "..\AssemblyForInternal\AssemblyForInternal.csproj", "{9B640B91-8399-4BA4-9D2C-08B5B8FF369C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssemblyForInternal", "..\AssemblyForInternal\AssemblyForInternal.csproj", "{9B640B91-8399-4BA4-9D2C-08B5B8FF369C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryAllocationStruct", "..\MemoryAllocationStruct\MemoryAllocationStruct.csproj", "{6DE348B2-FE93-4612-8966-AD63300ACBA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9B640B91-8399-4BA4-9D2C-08B5B8FF369C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B640B91-8399-4BA4-9D2C-08B5B8FF369C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B640B91-8399-4BA4-9D2C-08B5B8FF369C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DE348B2-FE93-4612-8966-AD63300ACBA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE348B2-FE93-4612-8966-AD63300ACBA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE348B2-FE93-4612-8966-AD63300ACBA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE348B2-FE93-4612-8966-AD63300ACBA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
