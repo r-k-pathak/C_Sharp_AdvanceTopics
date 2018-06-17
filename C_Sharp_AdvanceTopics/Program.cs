@@ -2,15 +2,22 @@
 using System;
 using C_Sharp_AdvanceTopics.ClassConcept;
 using C_Sharp_AdvanceTopics.Section1.Exercise_Solution;
+using C_Sharp_AdvanceTopics.Section2_Inheritance.Association;
+using C_Sharp_AdvanceTopics.Section2_Inheritance.Inheritacne;
+using C_Sharp_AdvanceTopics.Section2_Inheritance;
+using C_Sharp_AdvanceTopics.Section2_Inheritance.BoxingAndUnBoxing.Structure;
+using C_Sharp_AdvanceTopics.Section2_Inheritance.Exercise;
 
 namespace C_Sharp_AdvanceTopics
 {
+   
     
     class Program
     {
 
         static void Main(string[] args)
         {
+            #region section1-Classes
             //ConstructorOverLoading();
             //MethodOverloading();
             //UseOfParamArgumentModifier();
@@ -19,46 +26,155 @@ namespace C_Sharp_AdvanceTopics
             //UseOfReadOnly();
             //UserOfProperties();
             //UseOfIndexes();
-            
-            
-            StopWatch stopWatch = new StopWatch();
-            CommonStartUpMessage();
-            while (true)
+            #region Exercise And Solution
+            //StopWatch stopWatch = new StopWatch();
+            //CommonStartUpMessage();
+            //while (true)
+            //{
+            //    string userInput = Console.ReadLine();
+            //    switch (userInput)
+            //    {
+            //        case "start":
+            //            try
+            //            {
+            //                stopWatch.StartClock();
+            //            }
+            //            catch (Exception ex)
+
+            //            {
+            //                Console.WriteLine(ex.Message);
+            //                CommonStartUpMessage();
+            //            }
+
+            //            break;
+            //        case "stop":
+            //            stopWatch.StopClock();
+            //            break;
+            //        case "duration":
+            //            Console.WriteLine(stopWatch.Duration);
+            //            break;
+
+            //        case "exit":
+            //            Environment.Exit(0);
+            //            break;
+            //        default:
+            //            Console.WriteLine("Please provide valid input");
+            //            CommonStartUpMessage();
+            //            break;
+            //    }
+            //}
+
+            #endregion
+            #endregion
+            #region section-2 
+            //Access modifiers
+
+            //for detail find the class inside Section2_Inheritance/AccessModifiers
+            #region Association
+            /*
+             * We have two ways of code re-usablity Inheritance and Composition
+             * Here we will be discussing about Composition . and it's benifits over Inheritance
+             * When talk about best software design then we come to point about loos coupling means changes in one class should 
+             * not afftect the other's or affect should be very minor.
+             * Inheritnace come up with tight coupling this depend on project requirement what we have to use there.
+             * But composition comes up with loos coupling .This is also knows as HAS-A relation whereas Inheritance is also knowns as 
+             * IS-A relation.
+             * Read the descriptions mentionsed in each class under this section.
+             */
+            //Logger logger = new Logger();
+            //var dbMigrator = new DbMigrator(logger);
+            //dbMigrator.Migrate();
+            //var installer = new Installer(logger);
+            //installer.Install();
+
+            #endregion
+            #region Inheritacne
+            //string registrationNumber = "cbfh";
+            //Car car = new Car(registrationNumber);
+            //Console.WriteLine("Car regisration number is :{0}", car.GetRegistationNumber());
+            //Console.WriteLine("Car Specs are :{0}", car.GetCarSpecs());
+            ///*Now let's understand Upcasting(derived class=> Base class) and downcasting(BaseClass to Derived class)
+            // * Upcasting is implicit
+            // * Downcasting is explicit
+            // * Let's see itmes in action
+            // */
+            ////Way one upcasting
+            //Vehicle vehicle = car;
+            //Console.WriteLine("Car regisration number is :{0}", vehicle.GetRegistationNumber());
+            ////below line will not compile because Vehicle does not have any info regarding car
+            ////Console.WriteLine("Car Specs are :{0}", vehicle.GetCarSpecs());
+
+            ////Down Casting which is Explicit
+            ////way one Down casting
+            //Car car1 = (Car)vehicle;
+            //Console.WriteLine("Car regisration number is :{0}", car1.GetRegistationNumber());
+            ////---To avoid wrong Downcasting you can use any of the below ways otherwise it will throw invalid cast exception
+            ////Way two upcasting
+            //if (vehicle is Car)//This will be false if car is not derived from Vehicle
+            //{
+            //    Car car2 = (Car)vehicle;
+            //    Console.WriteLine("Car regisration number is :{0}", car2.GetRegistationNumber());
+            //    Console.WriteLine("Car Specs are :{0}", car2.GetCarSpecs());
+            //}
+            ////Way three Upcasting
+            ////This will return null if car is not derived from Vehilce
+            //Car car3 = vehicle as Car;
+            //if (vehicle != null)
+            //{
+            //    Vehicle vehicle1 = car;
+            //    Console.WriteLine("Car regisration number is :{0}", car3.GetRegistationNumber());
+            //    Console.WriteLine("Car Specs are :{0}", car3.GetCarSpecs());
+
+            //}
+
+            #endregion
+            #region Boxing and UnBoxing
+            //Test t1;
+            //Test t2 = new Test();
+            //Console.WriteLine("Stack Initialized Values");
+            ////Console.WriteLine("a:{0},b:{0}", t1.a, t1.b);
+            //Console.WriteLine("Heap Initialized Vaues");
+            //Console.WriteLine("a:{0},b:{0}", t2.a, t2.b);
+            #endregion
+
+            //Note structure does not takes memory inside the object even if they are declare inside the class
+            //otherwise we would be able to access the  object just with reference but this is not possible
+            //When every you initialize struct with new keywork there is always seperate memory allocation.
+            //CoOrdinates.SampleStruct t = new CoOrdinates.SampleStruct();
+            //    Console.WriteLine("a:{0}",t.a);
+            //Console.WriteLine("......Test static ....");
+            //CoOrdinates c = new CoOrdinates();
+
+            //CoOrdinates.StaticMethod();
+            //c.InstanceMethod();
+            //c.PrintstrutureMember();
+            //c.StrucOutSideTheClass();
+            //CoOrdinates c1 = new CoOrdinates();
+            //c1.PrintstrutureMember();
+            #region Exercise
+            Stack stack = new Stack();
+            try
             {
-                string userInput = Console.ReadLine();
-                switch (userInput)
-                {
-                    case "start":
-                        try
-                        {
-                            stopWatch.StartClock();
-                        }
-                        catch(Exception ex)
-
-                        {
-                            Console.WriteLine(ex.Message);
-                            CommonStartUpMessage();
-                        }
-                       
-                        break;
-                    case "stop":
-                        stopWatch.StopClock();
-                        break;
-                    case "duration":
-                        Console.WriteLine(stopWatch.Duration);
-                        break;
-
-                    case "exit":
-                        Environment.Exit(0);
-                        break;                   
-                    default: 
-                        Console.WriteLine("Please provide valid input");
-                        CommonStartUpMessage();
-                        break;
-                }
+               
+                stack.Push(1);
+                stack.Push(2);
+                stack.Push(3);
+                Console.WriteLine(stack.Pop());
+                Console.WriteLine(stack.Pop());
+                Console.WriteLine(stack.Pop());
             }
-            
-            //Console.ReadLine();
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            #endregion
+
+            #endregion
+            #region Inner Classes
+            #endregion
+
+
+            Console.ReadLine();
 
         }
         public static void CommonStartUpMessage()
@@ -97,21 +213,24 @@ namespace C_Sharp_AdvanceTopics
             {
                 Console.WriteLine("Order number :{0} and Order Summary:{0}", order.OrderNumber, order.OrderSummary);
             }
-            /*
-             *as in above class Order is not declared as read only so you might accidently assign it new object and old values gonna destroyed;
-             * to above this we gonna use readOnly
-             */
-            Console.WriteLine("Order Detail for Second Customer");
-            ReadOnlyCustomer.Customer customer1 = new ReadOnlyCustomer.Customer();
-            foreach (var order in customer1.Order)
+           
+            //customer.InitializeCustomerOrder();
+            Console.WriteLine("Second order for same customer");
+            customer.Order.Add(new ReadOnlyCustomer.Orders { OrderNumber = 2, OrderSummary = "Item1" });
+            foreach (var order in customer.Order)
             {
                 Console.WriteLine("Order number :{0} and Order Summary:{0}", order.OrderNumber, order.OrderSummary);
             }
             /*
-             * so as we see second customer don't have any order that's true.
-             * that reveals a concept that readonly fields cannot be assigned to(except in construtor or variable initializer)
-             * uncomment method InitializeCustomerOrder under  ReadOnlyCustomer.Customer and see the error message
-             */
+             * The benifit of readonly field's is that they are initialized onyl once within constructor or as property initialization
+             * As an example in above line of code if we dont declare Order field in customer class readonly and we accidently call method 
+             * IinitializeCustomerOrder fo customer Class what will happen your previous data will be lost that the reason we declared order 
+             * as read onyl .
+             * if you decalare field as readonly and try to initialize it inside of method or anywhere else except in cosntructor or
+             * as property initialization then compiler will detect it and show the error ,to see the error just uncomment the mehtod
+             * InitializeCustomerOrder in Customer class.
+             **/
+           
         }
 
         private static void UseOfRefArgumentModifiers()
