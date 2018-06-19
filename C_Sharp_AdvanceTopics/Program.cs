@@ -7,6 +7,7 @@ using C_Sharp_AdvanceTopics.Section2_Inheritance.Inheritacne;
 using C_Sharp_AdvanceTopics.Section2_Inheritance;
 using C_Sharp_AdvanceTopics.Section2_Inheritance.BoxingAndUnBoxing.Structure;
 using C_Sharp_AdvanceTopics.Section2_Inheritance.Exercise;
+using C_Sharp_AdvanceTopics.MethodOverriding;
 
 namespace C_Sharp_AdvanceTopics
 {
@@ -152,23 +153,30 @@ namespace C_Sharp_AdvanceTopics
             //CoOrdinates c1 = new CoOrdinates();
             //c1.PrintstrutureMember();
             #region Exercise
-            Stack stack = new Stack();
-            try
-            {
-               
-                stack.Push(1);
-                stack.Push(2);
-                stack.Push(3);
-                Console.WriteLine(stack.Pop());
-                Console.WriteLine(stack.Pop());
-                Console.WriteLine(stack.Pop());
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            //Stack stack = new Stack();
+            //try
+            //{
+
+            //    stack.Push(1);
+            //    stack.Push(2);
+            //    stack.Push(3);
+            //    Console.WriteLine(stack.Pop());
+            //    Console.WriteLine(stack.Pop());
+            //    Console.WriteLine(stack.Pop());
+            //}
+            //catch(Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
             #endregion
 
+
+            #endregion
+            #region Method overriding
+            Circle circle = new Circle();
+            circle.Draw();
+            Rectangle rectangle = new Rectangle();
+            rectangle.Draw();
             #endregion
             #region Inner Classes
             #endregion
