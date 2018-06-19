@@ -29,10 +29,12 @@ namespace C_Sharp_AdvanceTopics.Section2_Inheritance.Exercise
         }
         public string Clear()
         {
-            int lenght = _stack.Count;
-            if(lenght==0)
-                throw new InvalidOperationException("There is no element in Stack");
-            _stack.RemoveRange(0,lenght-1);
+            //int lenght = _stack.Count;
+            //if(lenght==0)
+            //    throw new InvalidOperationException("There is no element in Stack");
+            //_stack.RemoveRange(0,lenght-1);
+            _stack.Clear();
+            
            return "Stack is cleared.";
         }
     }
