@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pollymorphism\AbstractClass\AbstractClass.cs" />
     <Compile Include="Pollymorphism\MethodOverriding\Shape.cs" />
     <Compile Include="Section1_Classes\ClassConcept\Calculations.cs" />
     <Compile Include="Section1_Classes\ClassConcept\Customer.cs" />

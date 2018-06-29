@@ -8,6 +8,7 @@ using C_Sharp_AdvanceTopics.Section2_Inheritance;
 using C_Sharp_AdvanceTopics.Section2_Inheritance.BoxingAndUnBoxing.Structure;
 using C_Sharp_AdvanceTopics.Section2_Inheritance.Exercise;
 using C_Sharp_AdvanceTopics.MethodOverriding;
+using C_Sharp_AdvanceTopics.Pollymorphism.AbstractClass;
 
 namespace C_Sharp_AdvanceTopics
 {
@@ -173,10 +174,14 @@ namespace C_Sharp_AdvanceTopics
 
             #endregion
             #region Method overriding
-            Circle circle = new Circle();
-            circle.Draw();
-            Rectangle rectangle = new Rectangle();
-            rectangle.Draw();
+            //Circle circle = new Circle();
+            //circle.Draw();
+            //Rectangle rectangle = new Rectangle();
+            //rectangle.Draw();
+            #endregion
+            #region Abstract class
+            Pollymorphism.AbstractClass.Shape square = new Square(2);
+            Console.WriteLine("Area of Square is :" + square.Area());
             #endregion
             #region Inner Classes
             #endregion
