@@ -19,7 +19,7 @@ namespace C_Sharp_AdvanceTopics.Pollymorphism.AbstractClass
    public abstract class Shape
     {
         /**
-         * Abstract class can have non abstract member as well but it's not the sole use abstract
+         * Abstract class can have non abstract member as well but it's not the sole use of abstract
          * Abstract says it self it is incomplete.
          * */
         public  int Side { get; set; }
