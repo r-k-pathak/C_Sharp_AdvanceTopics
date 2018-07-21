@@ -30,11 +30,13 @@ namespace C_Sharp_AdvanceTopics.Section2_Inheritance.AccessModifiers
         public void GetProductDetail()
         {
             advancedFeature.FeatureIntroOutsideAssembly();
+            //for Internal
             //Not accesible because this resides in another assebly and have intenal access modifier
             //advancedFeature.FeatureIntroInsideAssembly();
 
+            //For ProtectedInternal
             //Below method can not be accesed as this has protected internal 
-            //so this will be access either in same class or same assembly derived class or in another assebly inside the derived class
+            //so this will be accessed either in same class or same assembly derived class or in another assebly inside the derived class
             //advancedFeature.FeatureIntroInsideAssemblyAndNextDerivedClass();
         }
     }
