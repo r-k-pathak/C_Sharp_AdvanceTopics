@@ -10,6 +10,8 @@ using C_Sharp_AdvanceTopics.Section2_Inheritance.Exercise;
 using C_Sharp_AdvanceTopics.MethodOverriding;
 using C_Sharp_AdvanceTopics.Pollymorphism.AbstractClass;
 using C_Sharp_AdvanceTopics.Pollymorphism.Sealed;
+using C_Sharp_AdvanceTopics.Interfaces;
+using C_Sharp_AdvanceTopics.Interfaces.Extensibility;
 
 namespace C_Sharp_AdvanceTopics
 {
@@ -185,8 +187,42 @@ namespace C_Sharp_AdvanceTopics
             //Console.WriteLine("Area of Square is :" + square.Area());
             //#endregion
             #region Sealed Class
-            FirstClass fc = new  ThirdClass();
-            fc.MethodTwo();
+            //FirstClass fc = new  ThirdClass();
+            //fc.MethodTwo();
+            #endregion
+            #region Interfaces
+            OrderProcessor orderProcessor = new OrderProcessor(new ShippingCalculator());
+            try
+            {
+                //Testability
+               
+                //new Order
+                orderProcessor.Process(new Order
+                {
+                    DatePlaced = DateTime.Now.AddDays(-1),
+                    Id = 1,
+                    TotalPrice = 4f
+                });
+                //order is already processed
+                orderProcessor.Process(new Order
+                {
+                    DatePlaced = DateTime.Now.AddDays(-1),
+                    Id = 1,
+                    Shipment = new Shipment { Cost = 4f, ShipmentDate = DateTime.Now.AddDays(-1) },
+                    TotalPrice = 4f
+                });
+             
+           }
+           catch(InvalidOperationException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //Extensibility
+            ConsoleLogger consoleLogger = new ConsoleLogger();
+            Interfaces.Extensibility.DbMigrator dbMigratorConsoleLogger = new Interfaces.Extensibility.DbMigrator(consoleLogger);
+            dbMigratorConsoleLogger.Migrate();
+            Interfaces.Extensibility.DbMigrator dbMigratorFileLogger = new Interfaces.Extensibility.DbMigrator(new FileLogger(@"C:\Users\Logs\Log.txt"));
+            dbMigratorFileLogger.Migrate();
             #endregion
             #region Inner Classes
             #endregion

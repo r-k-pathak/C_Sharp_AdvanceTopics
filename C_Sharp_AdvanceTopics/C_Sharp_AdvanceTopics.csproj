@@ -44,6 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\Extensibility\ConsoleLogger.cs" />
+    <Compile Include="Interfaces\Extensibility\Enums.cs" />
+    <Compile Include="Interfaces\Extensibility\FileLogger.cs" />
+    <Compile Include="Interfaces\Extensibility\ILogger.cs" />
+    <Compile Include="Interfaces\Extensibility\DbMigrator.cs" />
+    <Compile Include="Interfaces\Testability\IShippingCalculator.cs" />
+    <Compile Include="Interfaces\Testability\Order.cs" />
+    <Compile Include="Interfaces\Testability\OrderProcessor.cs" />
+    <Compile Include="Interfaces\Testability\Shipment.cs" />
+    <Compile Include="Interfaces\Testability\ShippingCalculator.cs" />
     <Compile Include="Pollymorphism\AbstractClass\AbstractClass.cs" />
     <Compile Include="Pollymorphism\MethodOverriding\Shape.cs" />
     <Compile Include="Pollymorphism\Sealed\SealedClasscs.cs" />
